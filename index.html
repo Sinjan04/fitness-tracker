@@ -24,10 +24,11 @@
       top: 0;
       z-index: 1000;
 
+      background: rgba(0,0,0,0.8);
       backdrop-filter: blur(10px);
-      background: rgba(0,0,0,0.7);
 
       padding: 12px 10px;
+      text-align: center;
     }
 
     section {
@@ -75,10 +76,12 @@
 
       .nav-links {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-      }
+        align-items: center;
+        flex-wrap: wrap;
 
+        gap: 10px;
+      }
       .nav-links a {
         padding: 8px 16px;
         border-radius: 50px;
@@ -723,10 +726,14 @@
       }
 
       .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+        padding: 6px 10px;
       }
 
       
