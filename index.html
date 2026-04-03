@@ -2,6 +2,7 @@
 <html>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinjan's Gym Website</title>
   <style>
     body {
@@ -268,6 +269,7 @@
 
       animation: fadeHero 1.2s ease;
       position: relative;   /* 👈 ADD THIS */
+      text-align: center;
     }
 
     .hero h1 {
@@ -614,6 +616,76 @@
     .btn {
       position: relative;
       z-index: 10;
+    }
+    @media (max-width: 768px) {
+
+      /* 🔹 HERO */
+      .hero h1 {
+        font-size: 28px;
+        text-align: center;
+      }
+
+      .hero p {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      /* 🔹 NAVBAR */
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links a {
+        margin: 5px;
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+
+      /* 🔹 SECTIONS */
+      section {
+        padding: 50px 15px;
+      }
+
+      h2 {
+        font-size: 22px;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-align: center;
+      }
+
+      /* 🔹 GLASS CARDS */
+      .glass {
+        padding: 20px;
+      }
+
+      /* 🔹 MILESTONES */
+      .milestones li {
+        font-size: 14px;
+      }
+
+      /* 🔹 LOG INPUTS */
+      input, button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      /* 🔹 GRAPH */
+      canvas {
+        width: 100% !important;
+      }
+
     }
   </style>
 </head>
