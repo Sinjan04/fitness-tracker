@@ -21,16 +21,19 @@
     header {
       position: sticky;
       top: 0;
-      backdrop-filter: blur(10px);
-      background: rgba(0,0,0,0.6);
-      padding: 15px 20px;
       z-index: 1000;
+
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.7);
+
+      padding: 12px 10px;
     }
 
     section {
       padding: 80px 20px;
       max-width: 1100px;
       margin: auto;
+      scroll-margin-top: 100px;
     }
     section + section {
       margin-top: 50px;
@@ -687,6 +690,53 @@
       }
 
     }
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+    }
+    .bottom-nav {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .bottom-nav {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        backdrop-filter: blur(10px);
+        justify-content: space-around;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+
+      .bottom-nav a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
@@ -695,6 +745,7 @@
   <header>
     <div class="nav">
       <h2>Sinjan Fitness </h2>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#progress">Progress</a>
@@ -1026,6 +1077,12 @@
       Ignoring these laws, the bumblebee flies anyway.
     </div>
   </section>
+  <div class="bottom-nav">
+    <a href="#hero">Home</a>
+    <a href="#progress">Progress</a>
+    <a href="#log">Log</a>
+    <a href="#graph">Graph</a>
+  </div>
 
   <script>
     let graphAnimated = false;
@@ -1338,6 +1395,9 @@
 
       // initial load
       rotateQuotes();
+    }
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("active");
     }
   </script>
 
