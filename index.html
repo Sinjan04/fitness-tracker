@@ -24,13 +24,13 @@
       top: 0;
       z-index: 1000;
 
-      background: rgba(0,0,0,0.9);
+      background: rgba(0,0,0,0.85);
       backdrop-filter: blur(10px);
 
-      padding: 15px 10px;
+      padding: 10px 8px;
 
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;   /* 🔥 IMPORTANT */
       align-items: center;
     }
 
@@ -85,19 +85,16 @@
         gap: 10px;
       }
       .nav-links a {
-        display: inline-block;
+        padding: 6px 10px;
+        font-size: 12px;
 
-        padding: 8px 16px;
         border-radius: 50px;
 
         background: rgba(255,255,255,0.08);
         border: 1px solid rgba(255,255,255,0.2);
 
-        color: white !important;
-        font-size: 14px;
-
+        color: white;
         text-decoration: none;
-        opacity: 1 !important;
 
         transition: all 0.3s ease;
       }
@@ -749,7 +746,10 @@
       width: 100%;
       overflow-x: hidden;
     }
-    
+    .nav-title {
+      font-size: 18px;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -757,7 +757,7 @@
 
   <header>
     <div class="nav">
-      <h2>Sinjan Fitness </h2>
+      <h2 class="nav-title">Sinjan Fitness</h2>
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#progress">Progress</a>
